@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>slick</title>
+
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="slick/slick-theme.css">
+
+    <style type="text/css">
+        html, body {
+            margin: 0;
+            padding: 0;
+            background-color: #3498db;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        .slider {
+            width: 90%;
+            margin: 100px auto;
+            background-color: white;
+        }
+
+        .slick-slide {
+            margin: 0px 20px;
+        }
+
+        .slick-slide img {
+            width: 100%;
+        }
+
+        .slick-prev:before,
+        .slick-next:before {
+            color: black;
+        }
+
+
+        .slick-slide {
+            transition: all ease-in-out .3s;
+            /*opacity: .2;*/
+        }
+
+        /*.slick-active {*/
+        /*    opacity: .5;*/
+        /*}*/
+
+        /*.slick-current {*/
+        /*    opacity: 1;*/
+        /*}*/
+
+        .slider--wrapper div {
+            background-color: orange;
+            border-radius: 50%;
+
+            /*width: calc(25vw - 25px);*/
+            /*height: calc(25vw - 25px);*/
+
+            width: calc(26vw - 20px);
+            height: calc(26vw - 20px);
+        }
+
+        @media (max-width: 600px) {
+            .slider--wrapper div {
+                width: calc(32vw - 15px);
+                height: calc(32vw - 15px);
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+<section class="your-class slider">
+    <div class="slider--wrapper">
+        <div>1</div>
+    </div>
+
+    <div class="slider--wrapper">
+        <div>2</div>
+    </div>
+
+    <div class="slider--wrapper">
+        <div>3</div>
+    </div>
+
+    <div class="slider--wrapper">
+        <div>4</div>
+    </div>
+
+    <div class="slider--wrapper">
+        <div>5</div>
+    </div>
+
+    <div class="slider--wrapper">
+        <div>6</div>
+    </div>
+
+</section>
+
+<script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+<script type="text/javascript">
+    $(document).ready(function() {
+        $('.your-class').slick({
+            // slidesToShow: 3,
+            arrows: true,
+            dots: true,
+            // centerMode: true,
+            variableWidth: true
+        });
+    });
+</script>
+
+</body>
+</html>
